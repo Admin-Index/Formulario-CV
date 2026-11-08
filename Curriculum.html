@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <form action="enviacurriculo.htm" method="POST" class="cv-form">
+
+        <header class="cv-header">
+            <div class="cv-title-box">
+                <h1>CURRICULUM VITAE</h1>
+            </div>
+            <div class="cv-photo-box">
+                <label for="input-foto" class="photo-label">
+                    <span>FOTO</span>
+                    <input type="file" id="input-foto" name="foto" accept="image/*">
+                </label>
+            </div>
+        </header>
+
+        <!-- Sección 1: Datos Personales -->
+        <section class="cv-section">
+            <h2>DATOS PERSONALES</h2>
+            <hr>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Apellidos:</label>
+                    <input type="text" name="apellidos" required>
+                </div>
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" required>
+                </div>
+                <div class="form-group full-width">
+                    <label>DNI:</label>
+                    <input type="text" name="dni">
+                </div>
+                <div class="form-group">
+                    <label>Fecha De Nacimiento:</label>
+                    <input type="date" name="fecha_nacimiento">
+                </div>
+                <div class="form-group">
+                    <label>Lugar:</label>
+                    <input type="text" name="lugar_nacimiento">
+                </div>
+                <div class="form-group full-width">
+                    <label>Dirección:</label>
+                    <input type="text" name="direccion">
+                </div>
+                <div class="form-group">
+                    <label>Localidad:</label>
+                    <input type="text" name="localidad">
+                </div>
+                <div class="form-group">
+                    <label>Provincia:</label>
+                    <input type="text" name="provincia">
+                </div>
+                <div class="form-group full-width">
+                    <label>Teléfono:</label>
+                    <input type="tel" name="telefono">
+                </div>
+                <div class="form-group full-width">
+                    <label>Teléfono Móvil:</label>
+                    <input type="tel" name="telefono_movil">
+                </div>
+                <div class="form-group full-width">
+                    <label>E-Mail:</label>
+                    <input type="email" name="email">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Formación y Estudios -->
+        <section class="cv-section">
+            <h2>FORMACION Y ESTUDIOS</h2>
+            <hr>
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <label>Titulación:</label>
+                    <input type="text" name="titulacion">
+                </div>
+                <div class="form-group full-width">
+                <label>Idiomas:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="idiomas[]" value="Español"> Español</label>
+                    <label><input type="checkbox" name="idiomas[]" value="Inglés"> Inglés</label>
+                    <label><input type="checkbox" name="idiomas[]" value="Francés"> Francés</label>
+                    <label><input type="checkbox" name="idiomas[]" value="Alemán"> Alemán</label>
+                    <label><input type="checkbox" name="idiomas[]" value="Italiano"> Italiano</label>
+                    <label><input type="checkbox" name="idiomas[]" value="Portugués"> Qchua</label>
+                </div>
+                </div>
+                <div class="form-group full-width">
+                    <label>Conocimientos informáticos:</label>
+                    <input type="text" name="conocimientos_informaticos">
+                </div>
+                <div class="form-group full-width">
+                    <label>Cursos y seminarios:</label>
+                    <input type="text" name="cursos_seminarios">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Experiencia Profesional -->
+        <section class="cv-section">
+            <h2>EXPERIENCIA PROFESIONAL</h2>
+            <hr>
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <label>Empresa:</label>
+                    <input type="text" name="empresa">
+                </div>
+                <div class="form-group full-width">
+                    <label>Fecha:</label>
+                    <input type="text" name="fecha_experiencia" placeholder="Ej. 2022 - 2025">
+                </div>
+                <div class="form-group full-width">
+                    <label>Puesto/Actividad desarrollada:</label>
+                    <textarea name="puesto_actividad" rows="3"></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Datos Complementarios -->
+        <section class="cv-section">
+            <h2>DATOS COMPLEMENTARIOS</h2>
+            <hr>
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <textarea name="datos_complementarios" rows="3" placeholder="Información adicional..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <footer class="cv-footer">
+            <p>Todo lo expuesto anteriormente podrá ser acreditado, en caso de solicitud.</p>
+            <div class="signature-line">
+                <label>(lugar y fecha):</label>
+                <input type="text" name="lugar_fecha" placeholder="Ej. Madrid, 8 de Noviembre de 2026">
+            </div>
+            
+            <div class="form-actions">
+                <a href="index.html" class="btn-volver">Volver al Inicio</a>
+                <button type="submit" class="btn-enviar">Enviar Currículum</button>
+            </div>
+        </footer>
+
+    </form>
+
+</body>
+</html>
